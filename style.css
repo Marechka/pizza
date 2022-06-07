@@ -1,11 +1,12 @@
 body {
     background-color: black;
+    color: white;
 }
 h1, h2, nav {
-    color: white;
     display: flex;
-
+    font-family: 'Kanit', sans-serif;
 }
+
 h1 {
     font-size: 150px;
 }
@@ -24,9 +25,30 @@ header {
     margin: 0 auto;
 }
 
-.bodyText {
-    color: whitesmoke;
+.disable {
+    display: none;
 }
-label {
-    color: white;
+.unable {
+    display:block;
+}
+
+a {
+    color: rgb(20, 37, 131);
+    text-decoration: none;
+}
+.contButton {
+    /* display: center; */
+    margin:  auto;
+    width: 5%;
+}
+button {
+    padding: 700px;
+}
+
+.selectBlocks {
+    height: 500;
+    width: 600;
+    display:inline-block;
+    text-align: left;
+    padding: 30px
 }

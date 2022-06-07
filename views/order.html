@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap" rel="stylesheet">
     <link rel = "stylesheet" href = "../style.css">
     <title>Order</title>
 </head>
@@ -17,31 +20,76 @@
             <ul><a href=#>ORDER</a></ul>
         </nav> 
     </header>
-    <div>
+
+    <form action="" id="orderForm"> 
         <h1> Create your dream pizza!</h1>
-    </div>
+        <div class="selectBlocks">
+            <h2> Select crust </h2>
+            <!-- <section> -->
+                <input class="options" type="radio" name="crust" id="crust1" value="thin">
+                <label for="crust"> thin </label>
+                <input class="options" type="radio" name="crust" id="crust2" value="thick">
+                <label for="crust"> thcick </label>
+            <h2> Select toppings </h2>
+                <input type="checkbox" id="topping1" name="topping" value="salami">
+                <label for="topping1"> salami</label><br>
+                <input type="checkbox" id="topping2" name="topping" value="grilled chicken ">
+                <label for="topping2"> grilled chicken</label><br>
+                <input type="checkbox" id="topping3" name="topping" value="mushrooms">
+                <label for="topping3"> mushrooms</label><br>
+            <!-- </section> -->
+      </div>
+      <div class="selectBlocks">
+             <h2> Select drink </h2>
+            <!-- <section> -->
+                <input type="checkbox" id="drink1" name="drink" value="Coke">
+                <label for="drink1"> Coke</label><br>
+                <input type="checkbox" id="drink2" name="drink" value="Sprite ">
+                <label for="drink2"> Sprite</label><br>
+                <input type="checkbox" id="drink3" name="drink" value="Coffee">
+                <label for="drink3"> Coffee</label><br>
+                <input type="checkbox" id="drink4" name="drink" value="Juice">
+                <label for="drink4"> Juice</label><br>
+                <input type="checkbox" id="drink5" name="drink" value="Juice">
+                <label for="drink5"> Juice</label><br>
+                <input type="checkbox" id="drink6" name="drink" value="Juice">
+                <label for="drink6"> Juice</label>
+            <!-- </section> -->
+      </div>
 
-    <form action="" > 
-        <h2> Select crust </h2>
-        <section>
-
-            <input class="options" type="radio" name="crust" id="thin" value="thin">
-            <label for="crust"> thin </label>
-            <input class="options" type="radio" name="crust" id="thick" value="thick">
-            <label for="crust"> thcick </label>
-            
-        </section>
-        <h2> Select toppings </h2>
-        <section>
-            <input type="checkbox" id="topping1" name="topping1" value="salami">
-            <label for="topping1"> salami</label><br>
-            <input type="checkbox" id="topping2" name="topping2" value="grilled chicken ">
-            <label for="topping2"> grilled chicken</label><br>
-            <input type="checkbox" id="topping3" name="topping3" value="mushrooms">
-            <label for="topping3"> mushrooms</label>
-        </section>
-        <button value = "CONTINUE" onclick=order()>
+        <div class="contButton"><button type="button" class="btn btn-primary btn-lg" id="order">CONTINUE</button></div>
     </form>
+
+    <div id="orderSummary" class="disable">
+     <h1>ORDER SUMMARY</h1>
+        <table class="table table-dark">
+            <thead>
+                <!-- <caption>ORDER SUMMARY </caption> -->
+                <tr> 
+                    <th colspan = 2 style="font-size:50px"> PIZZA </th>
+                    <th colspan = 2 style="font-size:50px"> DRINKS </th>
+                </tr>
+                <tr>
+                    <th> OPTION</th>
+                    <th> SELECTED</th>
+                    <th> OPTION</th>
+                    <th> SELECTED</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CRUST</td>
+                    <td id="selectedCrust"></td>
+                    <td>TOPPINGS</td>
+                    <td id="selectedToppings"></td>
+                </tr>
+            </tbody>
+        </table> 
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+
+
 
 </body>
 </html>
