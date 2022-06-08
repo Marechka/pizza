@@ -21,13 +21,11 @@
         </nav> 
     </header>
     
-    <div id="orderSummary">
+    <div id="menu">
            <h1 style="position: relative; left: 40%">MENU</h1>
            <table class="table table-dark">
                <thead>
-                   <!-- <caption>ORDER SUMMARY </caption> -->
                    <tr> 
-                       <!-- <th colspan = 2 style="font-size:50px"> DRINKS </th> -->
                        <th colspan = 6 style="font-size:50px"> PIZZA </th>
                        
                    </tr>
@@ -42,11 +40,12 @@
                    <tr>
                        <td>PEPPERONI</td>
                        <td><img class="menuImage" id="Pepperoni" src="../img/pepperoni.jpg"></td>
-                       <td>salami,jalapeno, basil, mozarella cheese</td>
-                       <td>$15.99</td>
+                       <td>salami,jalapeno, basil, mozzarella cheese</td>
+                       <td>$15.25</td>
                        <td>
                         <label for=""> QTY </label><br>
                         <select id="Qty1">
+                            <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3 </option>
@@ -57,11 +56,12 @@
                    <tr>
                     <td>HAWAIIAN</td>
                     <td><img class="menuImage" id="Hawaiian" src="../img/hawaiian.jpg"></td>
-                    <td>salami,jalapeno, basil, mozarella cheese</td>
-                    <td>$13.99</td>
+                    <td>salami,jalapeno, basil, mozzarella cheese</td>
+                    <td>$13.25</td>
                     <td>
                      <label for=""> QTY </label><br>
                      <select id="Qty2">
+                         <option value="0">0</option>
                          <option value="1">1</option>
                          <option value="2">2</option>
                          <option value="3">3 </option>
@@ -79,6 +79,7 @@
                         <td>
                          <label for=""> QTY </label><br>
                          <select id="Qty3">
+                             <option value="0">0</option>
                              <option value="1">1</option>
                              <option value="2">2</option>
                              <option value="3">3 </option>
@@ -93,21 +94,89 @@
                             <td>
                              <label for=""> QTY </label><br>
                              <select id="Qty4">
+                                 <option value="0">0</option>
                                  <option value="1">1</option>
                                  <option value="2">2</option>
                                  <option value="3">3 </option>
                              </select>
                              <button type="button" class="btn btn-primary btn-sm" id="add4" value="Sprite">ADD TO ORDER</button>
                             </td>
-                </tr>
+                      </tr>
 
                </tbody>
            </table> 
 
-           <button type="button" class="btn btn-primary d-grid gap-2 col-6 mx-auto" id="finOrder">ORDER SUMMARY</button><br>
+           <button type="button" class="btn btn-primary d-grid gap-2 col-6 mx-auto" id="orderMenuSum">ORDER SUMMARY</button><br>
        </div>
+
+       <div id="orderMenuSummary" class="disable">
+        <h1>ORDER SUMMARY</h1>
+           <table class="table table-dark">
+               <thead>
+                   <!-- <caption>ORDER SUMMARY </caption> -->
+                   <tr> 
+                       <th colspan = 2 style="font-size:50px"> DRINKS </th>
+                       <th colspan = 4 style="font-size:50px"> PIZZA </th>
+                   </tr>
+                   <tr>
+                       <th> OPTION</th>
+                       <th> SELECTED</th>
+                       <th> OPTION</th>
+                       <th colspan = 3> SELECTED</th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr>
+                       <td>DRINKS</td>
+                       <td id="selectedMenuDrinks"></td>
+                       <td>PIZZA</td>
+                       <td id="selectedPizzas"></td>
+                       <td></td>
+                       <td id="Qty"></td>
+                   </tr>
+                   <tr> 
+                       <td colspan = 3 style="font-size:40px">TOTAL:</td>
+                       <td colspan = 3 id="totalMenuOrder"></td>
+                   </tr>
+               </tbody>
+           </table> 
+           <button type="button" class="btn btn-primary d-grid gap-2 col-6 mx-auto" id="finMenuOrder">FINALIZE ORDER</button>
+       </div>
+
+       <form action="" id="customInfoMenu"  class="disable"> 
+        <br>
+        <h2> Please fill out delivery and contact info</h2>
+
+                <label for="""> Name </label>
+                <input class="" type="text" id="name" placeholder="John Smith">
+
+                <label for=""> Address </label>
+                <input class="" type="address" id="address" placeholder="44th Ave SE">
+
+                <label for=""> City </label>
+                <select id="city">
+                    <option value="Seattle">Seattle</option>
+                    <option value="Bellevue">Bellevue</option>
+                    <option value="Shoreline">Shoreline </option>
+                </select>
+
+                <label for=""> State </label>
+                <select id="state">
+                    <option value="WA">WA</option>
+                </select>
+            
+                <label for=""> Phone number</label>
+                <input type="phone" id="phone" placeholder="(123)222-2222">
+
+                <label for="topping2"> Email</label>
+                <input type="email" id="email" placeholder="JohnSmith@gmail.com"><br>
+
+                <button type="button" class="btn btn-primary d-grid gap-2 col-6 mx-auto" id="submitMenuOrder">SUBMIT ORDER</button>
+    </form>
+
+    <h2 class="disable" id="thankYou" style="text-align: center; ">THANK YOU FOR YOUR ORDER!</h2>
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="../script.js"></script>
+    <script src="../script_menu.js"></script>
 </body>
 </html>

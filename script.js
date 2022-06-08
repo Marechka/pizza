@@ -4,8 +4,8 @@ const totalMenuItems = 4;
 const menu = {
     // pizza: ["pepperoni", "hawaiian"],
     // pizzaPrice: [15.99, 13.99],
-    Pepperoni : 15.99,
-    Hawaiian: 13.99,
+    Pepperoni : 15.25,
+    Hawaiian: 13.25,
     basePrice: 5,
     toppingPrice: 2.50,
     drink: ["Coke", "Sprite"],
@@ -31,10 +31,11 @@ let orderMenu = {
 const orderButton = document.querySelector('#cont');
 //if (orderButton.clicked) {
 //orderButton.onclick = () => {
- orderButton.addEventListener('click', () => {
+ //orderButton.addEventListener('click', () => {
     //console.log("You clocked me!")
     //let topping = document.querySelector('.topping').value;
     
+    function w (clicked) {
     for (let i = 1; i <= 3; i++) {
         if (document.querySelector(`#topping${i}`).checked) {
             let val = document.querySelector(`#topping${i}`).value
@@ -64,8 +65,8 @@ const orderButton = document.querySelector('#cont');
     document.querySelector('#selectedToppings').innerText = orderManual.toppings.join(", ");
     document.querySelector('#selectedDrinks').innerText = orderManual.drinks.join(", ");
     total.innerText = `$${orderManual.total}`;
-
-})
+    
+}//})
 
 const finalOrder = document.querySelector('#finOrder');
 
@@ -83,44 +84,3 @@ submOrder.addEventListener('click', () => {
     customInfo.classList.toggle('customInfo');
     customInfo.classList.toggle('disable'); //remove class
 })
-
-
-// if (document.querySelector("#menuLink").clicked) {
-// for (let i = 1; i <= totalMenuItems; i++) {
-//     if (document.querySelector(`#add${i}`).clicked) {
-//         if (i <= pizzaMenuItems) {
-//             let item = document.querySelector(`#add${i}`);
-//             let i = menu.pizza.indexOf(item.value);
-//             let pizPrice = menu.pizzaPrice(i);
-//             orderMenu.pizza.push(item.value);
-
-//             console.log(orderMenu.total += (document.querySelector(`#Qty${i}`).value) * pizPrice)
-//         }
-//     }
-
-// }
-// console.log(document.querySelector(`#Qty${1}`).value)
-// console.log(orderMenu.total += (document.querySelector(`#Qty${1}`).value) * 10)
-// const addToCartBut = document.querySelector('.add');
-// }
-
-// const add1Button = document.querySelector('#add1');
-// add1Button.addEventListener('click', () => {
-//     //const el = document.getElementById('select');
-
-//     const qty= document.getElementById('Qty1');
-//     qty.addEventListener('change', function handleChange(event) {
-//     if (event.target.value === '1') {
-//        // box.style.display = 'block';
-//     } else if (event.target.value === '2'){
-//         //box.style.display = 'none';
-//     }
-//     });
-
-
-//console.log(addToCartBut)
-
-// document.querySelector('#order').onclick = function () {
-//     //alert("You clocked me!");
-//     orderForm.classList.toggle('disable');
-// }
