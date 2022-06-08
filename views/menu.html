@@ -16,10 +16,97 @@
         <h1>PIZZA</h1>
         <nav>
             <ul><a href=../index.html>HOME</a></ul>
-            <ul><a href=#>MENU</a></ul>
+            <ul><a href=# id="menuLink">MENU</a></ul>
             <ul><a href=order.html>ORDER</a></ul>
         </nav> 
     </header>
+    
+    <div id="orderSummary">
+           <h1 style="position: relative; left: 40%">MENU</h1>
+           <table class="table table-dark">
+               <thead>
+                   <!-- <caption>ORDER SUMMARY </caption> -->
+                   <tr> 
+                       <!-- <th colspan = 2 style="font-size:50px"> DRINKS </th> -->
+                       <th colspan = 6 style="font-size:50px"> PIZZA </th>
+                       
+                   </tr>
+                   <tr>
+                       <th colspan = 2> NAME</th>
+                       <th> INGREDIENTS</th>
+                       <th> PRICE</th>
+                       <th> ORDER</th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr>
+                       <td>PEPPERONI</td>
+                       <td><img class="menuImage" id="Pepperoni" src="../img/pepperoni.jpg"></td>
+                       <td>salami,jalapeno, basil, mozarella cheese</td>
+                       <td>$15.99</td>
+                       <td>
+                        <label for=""> QTY </label><br>
+                        <select id="Qty1">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3 </option>
+                        </select>
+                        <button type="button" class="btn btn-primary btn-sm" id="add1" value="Pepperoni">ADD TO ORDER</button>
+                       </td>
+                   </tr>
+                   <tr>
+                    <td>HAWAIIAN</td>
+                    <td><img class="menuImage" id="Hawaiian" src="../img/hawaiian.jpg"></td>
+                    <td>salami,jalapeno, basil, mozarella cheese</td>
+                    <td>$13.99</td>
+                    <td>
+                     <label for=""> QTY </label><br>
+                     <select id="Qty2">
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3 </option>
+                     </select>
+                     <button type="button" class="btn btn-primary btn-sm" id="add2" value="Hawaiian" >ADD TO ORDER</button>
+                    </td>
+                    <tr> 
+                        <th colspan = 6 style="font-size:50px"> DRINKS </th>
+                    </tr>
+                    <tr>
+                        <td>COKE</td>
+                        <td><img class="menuImage" id="Coke" src="../img/coke.jfif"></td>
+                        <td></td>
+                        <td>$2.50</td>
+                        <td>
+                         <label for=""> QTY </label><br>
+                         <select id="Qty3">
+                             <option value="1">1</option>
+                             <option value="2">2</option>
+                             <option value="3">3 </option>
+                         </select>
+                         <button type="button" class="btn btn-primary btn-sm add" id="add3" value="Coke">ADD TO ORDER</button>
+                        </td>
+                        <tr>
+                            <td>SPRITE</td>
+                            <td><img class="menuImage" id="Sprite" src="../img/sprite.jpg"></td>
+                            <td></td>
+                            <td>$2.50</td>
+                            <td>
+                             <label for=""> QTY </label><br>
+                             <select id="Qty4">
+                                 <option value="1">1</option>
+                                 <option value="2">2</option>
+                                 <option value="3">3 </option>
+                             </select>
+                             <button type="button" class="btn btn-primary btn-sm" id="add4" value="Sprite">ADD TO ORDER</button>
+                            </td>
+                </tr>
+
+               </tbody>
+           </table> 
+
+           <button type="button" class="btn btn-primary d-grid gap-2 col-6 mx-auto" id="finOrder">ORDER SUMMARY</button><br>
+       </div>
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="../script.js"></script>
 </body>

@@ -57,7 +57,7 @@
             <!-- </section> -->
       </div>
 
-        <div class="contButton"><button type="button" class="btn btn-primary btn-lg" id="order">CONTINUE</button></div>
+        <div class="contButton"><button type="button" class="btn btn-primary btn-lg" id="cont">CONTINUE</button></div>
     </form>
 
     <div id="orderSummary" class="disable">
@@ -66,10 +66,12 @@
             <thead>
                 <!-- <caption>ORDER SUMMARY </caption> -->
                 <tr> 
-                    <th colspan = 2 style="font-size:50px"> PIZZA </th>
                     <th colspan = 2 style="font-size:50px"> DRINKS </th>
+                    <th colspan = 4 style="font-size:50px"> PIZZA </th>
                 </tr>
                 <tr>
+                    <th> OPTION</th>
+                    <th> SELECTED</th>
                     <th> OPTION</th>
                     <th> SELECTED</th>
                     <th> OPTION</th>
@@ -78,14 +80,56 @@
             </thead>
             <tbody>
                 <tr>
+                    <td>DRINKS</td>
+                    <td id="selectedDrinks"></td>
                     <td>CRUST</td>
                     <td id="selectedCrust"></td>
                     <td>TOPPINGS</td>
                     <td id="selectedToppings"></td>
                 </tr>
+                <tr> 
+                    <td colspan = 4 style="font-size:40px">TOTAL:</td>
+                    <td colspan = 2 id="total"></td>
+                </tr>
             </tbody>
         </table> 
+        <button type="button" class="btn btn-primary d-grid gap-2 col-6 mx-auto" id="finOrder">FINALIZE ORDER</button>
     </div>
+ 
+    <form action="" id="customInfo"  class="disable"> 
+        <br>
+        <h2> Please fill out delivery and contact info</h2>
+
+                <label for="""> Name </label>
+                <input class="" type="text" id="name" placeholder="John Smith">
+
+                <label for=""> Address </label>
+                <input class="" type="address" id="address" placeholder="44th Ave SE">
+
+                <label for=""> City </label>
+                <select id="city">
+                    <option value="Seattle">Seattle</option>
+                    <option value="Bellevue">Bellevue</option>
+                    <option value="Shoreline">Shoreline </option>
+                </select>
+
+                <label for=""> State </label>
+                <select id="state">
+                    <option value="WA">WA</option>
+                </select>
+            
+                <label for=""> Phone number</label>
+                <input type="phone" id="phone" placeholder="(123)222-2222">
+
+                <label for="topping2"> Email</label>
+                <input type="email" id="email" placeholder="JohnSmith@gmail.com"><br>
+
+                <button type="button" class="btn btn-primary d-grid gap-2 col-6 mx-auto" id="submitOrder">SUBMIT ORDER</button>
+    </form>
+
+
+    <h2 class="disable" id="thankYou" style="text-align: center; ">THANK YOU FOR YOUR ORDER!</h2>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="../script.js"></script>
 
